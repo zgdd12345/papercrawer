@@ -1,5 +1,5 @@
 # arXiv 文献爬虫示例
-import requests
+import requests, os
 
 import arxiv
 from bs4 import BeautifulSoup
@@ -45,7 +45,7 @@ def fetch_arxiv_papers(query, max_results=5):
 
 
   # 安装：pip install arxiv
-import os
+
 
 def download_arxiv_papers(query="cat:cs.CV", max_results=None):
     # 按关键词批量下载（计算机视觉领域示例）
@@ -79,4 +79,4 @@ if __name__ == "__main__":
 	# 	print("作者:", ', '.join(paper['authors']))
 	# 	print("摘要:", paper['summary'])
 	# 	print("链接:", paper['link'])
-    download_arxiv_papers(query="cat:quant-ph AND cs.DS", max_results=10)
+    download_arxiv_papers(query="cat:quant-ph AND cs.DS", max_results=None)
